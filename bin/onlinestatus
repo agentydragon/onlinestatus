@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+begin
+	require 'onlinestatus'
+rescue LoadError
+	require 'rubygems'
+	require 'onlinestatus'
+end
+
+if OnlineStatus.online?
+	puts "Online."
+	exit 0
+else
+	puts "Offline."
+	exit 1
+end
