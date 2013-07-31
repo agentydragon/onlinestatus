@@ -7,10 +7,19 @@ rescue LoadError
 	require 'onlinestatus'
 end
 
+quiet = false
+
+until ARGV.empty?
+	case ARGV.shift
+	when '-q', '--quiet' then quiet = true
+	else abort "Wrong command line args."
+	end
+end
+
 if OnlineStatus.online?
-	puts "Online."
+	puts "Online." unless quiet
 	exit 0
 else
-	puts "Offline."
+	puts "Offline." unless quiet
 	exit 1
 end

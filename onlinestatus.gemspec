@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 	s.name = 'onlinestatus'
-	s.version = '0.0.1'
-	s.date = '2013-02-16'
+	s.version = '0.0.2'
+	s.date = '2013-07-31'
 	s.summary = 'Do you have an internet connection?'
 	s.description = <<-EOF
 		This simple gem tries to detect your online status
